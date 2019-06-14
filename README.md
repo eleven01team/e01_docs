@@ -308,3 +308,188 @@ curl -X GET "http://localhost:8083/api/node/heartbeat" -H "accept: application/j
 "result": "Node stopped"
 }
  ```
+ 
+ ### NETWORK API'S
+
+1.  /api/get/add/enodeId
+
+-To add new node enodeId in permissioned-node.json file which helps in permissioning network.
+-Method - post
+-Payload - {"enodeId": <node id>}
+-Responses
+    * Status code 200, {"result": "success"}
+    * Status code 400, {"error": "validation error"}
+    * Status code 500, {"error": "Error in writing enodeId in permissioned-node.json file"}
+     
+ **Example:**
+ 
+```shell
+{ 
+curl -X POST "http://localhost:8081/api/get/add/enodeId" -H "accept: application/json" -H 
+"Content-Type: application/json" -d "{ \"enodeId\": \"enode://ac6b1096ca56b9f6d004b779ae3728bf83f8e22453404cc3cef16a3d9b96608bc67c4b30db88e0a5a6c6390213f7acbe1153ff6d23ce57380104288ae19373ef@127.0.0.1:21000?discport=0&raftport=50401\"}" }
+```
+
+**Response body:**
+
+```shell
+{
+"result:": "success"
+}
+```
+
+2. /api/get/{networkName}/{name}
+
+- To fetch genesis block or permissioned-node.json file for that network
+- Method - GET
+- Parameters -
+     * networkName- name of network for which you need to fetch the files.
+     * name - file name it can be either genesis.json or permissioned-node.json
+- Responses
+    * Status code 200, <genesis/permissioned-node.json>
+    * Status code 400, {"error": "bad request"}
+    * Status code 404, {"eror": "file not found"}
+   
+**Example:**
+
+```shell
+curl -X GET "http://localhost:8081/api/get/demo/genesis" -H "accept: application/json"
+```
+
+**Response body:**
+
+```shell
+{
+"alloc": {
+},
+"coinbase": "0x0000000000000000000000000000000000000000",
+"config": {
+"byzantiumBlock": 1,
+"chainId": 11,
+"eip150Block": 1,
+"eip155Block": 0,
+"eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+"eip158Block": 1,
+"isQuorum":true
+},
+"difficulty": "0x0",
+"extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
+"gasLimit": "0xE0000000",
+"mixhash": "0x00000000000000000000000000000000000000647572616c65787365646c6578",
+"nonce": "0x0",
+"parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+"timestamp": "0x00"
+}
+```
+
+3. /api/join
+
+- To join an existing network supports
+- Method - POST
+- Payload - {"consensus": "", "enodeId": "", "networkName": "" }
+- Responses
+     * Status code 200, {"result": <raftid/success> }
+     * Status code 400, {"error": "validation error" }
+     * Status code 404, {"error": "wrong consensus type|network does not exists" }
+     
+ **Example:**
+ 
+ ```shell
+ curl -X POST "http://localhost:8081/api/join" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"consensus\": \"raft\", \"enodeId\": \"enode://ac6b1096ca56b9f6d004b779ae3728bf83f8e22453404cc3cef16a3d9b96608bc67c4b30db88e0a5a6c6390213f7acbe1153ff6d23ce57380104288ae19373ef@127.0.0.1:21000?discport=0&raftport=50401\", \"networkName\": \"demo\"}"
+ ```
+ 
+ **Response body:**
+ 
+ ```shell
+ {
+"Result": 2
+}
+ ```
+ 
+ 4. /api/nodeInfo/urls
+ 
+- To get the node rpc and ws urls
+- Method - GET
+- Payload - none
+- Responses
+     * Status code 200, {"result": ['rpc url', 'ws url']}
+     * Status code 500, {"error": "Internal Server error"}
+     
+ **Example:**
+ 
+ ```shell
+ curl -X GET "http://localhost:8081/api/nodeInfo/urls" -H "accept: application/json"
+ ```
+ 
+ **Response body:**
+ 
+ ```shell
+ {
+"result": [
+"http://node5:8083/api/node/rpc",
+"http://node5:8083/api/node/ws"
+]
+}
+
+5.  /api/nodeinfo
+
+- To fetch the nodes status up/down
+- Method - GET
+- Payload - none
+- Responses
+     * Status code 200, ['status': 'Up/Down', 'ip':' ', 'name': ' ', 'port': 'server port']
+ ```
+ 
+ **Example:**
+ 
+ ```shell
+ curl -X GET "http://localhost:8081/api/nodeinfo" -H "accept: application/json"
+ ```
+ 
+ **Response body:**
+ 
+ ```shell
+ [
+{
+"status": "Up",
+"ip": "10.0.0.20",
+"name": "node1",
+"port": "8083"
+},
+{
+"status": "Down",
+"ip": "10.0.0.24",
+"name": "node1",
+"port": "8083"
+},
+{
+"status": "Up",
+"ip": "10.0.0.24",
+"name": "node2",
+"port": "8083"
+}
+]
+ ```
+ 
+ 6. /api/nodeinfo/add
+ 
+- To add node information/configuration into database
+- Method - POST
+- Payload - {"data": }
+- Responses
+     * Status code 200, {"result": success }
+     * Status code 400, {"error": "validation error" }
+     * Status code 500, {"error": "" }
+     
+**Example:**
+  
+```shell
+curl -X POST "http://localhost:8081/api/nodeinfo/add" -H"accept: application/json" -H
+"Content-Type: application/json" -d "{ \"data\": \"{'networkName' : 'demo','config' : { 'whisper_port' : '22001','ws_port' : '22005', 'current_ip' : '10.0.0.24', 'raft_port' : '22004','tessera_port' : '22002', 'rpc_port' : '22000', 'raft_id' : '5' },'type' : 'node', 'name' : 'node1' }\"}"
+```
+**Response body:**
+
+```shell
+{
+"result": "Success"
+}
+```
