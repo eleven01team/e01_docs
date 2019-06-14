@@ -38,17 +38,17 @@ In addition to the protocol, we will also be unveiling the Eleven01 “Marketpla
 The User has the flexibility of creating the account in two ways. They are:
 
 1. By entering the details
-  -a. After entering the details, click on “Confirm Email” button.
-  -b. Verify your registered email by clicking on the verification link.
-  -c. Enter details on application page and click on the “Sign-up” button.
-  -d. Developer will be redirected to the landing page to access the content present in developers portal and create applications.
+     - After entering the details, click on “Confirm Email” button.
+     - Verify your registered email by clicking on the verification link.
+     - Enter details on application page and click on the “Sign-up” button.
+     - Developer will be redirected to the landing page to access the content present in developers portal and create applications.
   
  *For **Login**,use the similar process but there won’t be any email verification.
  
 2. By Social Authentications
-  -a. We provide Github and Google as two open authentication options.
-  -b. Based on preference choose any one. Click “Allow” on consent screen shown by chosen applications.
-  -c. Developer will be redirected to the landing page to access the content present in developers portal and create applications.
+    - We provide Github and Google as two open authentication options.
+    - Based on preference choose any one. Click “Allow” on consent screen shown by chosen applications.
+    - Developer will be redirected to the landing page to access the content present in developers portal and create applications.
   
 *For **Login**,use the similar process for open authentication.
  
