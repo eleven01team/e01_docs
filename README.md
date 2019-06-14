@@ -89,4 +89,7 @@ Eleven01 TestNet is a public network which works on Raft consensus. Installation
    - Dependencies packages (libdb-dev, libleveldb-dev, libleveldb-dev, libleveldb-dev, libleveldb-dev, solc, sysvbanner, software-              properties-common, default-jdk, maven)
    - IPFS (optional)
 
-
+``` shell 
+cd deployment-scripts 
+sudo ./bootstrap.sh 
+```
