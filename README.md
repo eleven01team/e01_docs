@@ -83,7 +83,7 @@ Eleven01 TestNet is a public network which works on Raft consensus. Installation
 
 1. git clone  [git@github.com](https://developers.eleven01.io/)  :eleven01team/deployment-scripts.git
 2. Change directory to deployment-scripts and run bootstrap.sh
-3. This script will install all prerequisites which includes
+3. This script will install all prerequisites which includes.
   -a. Tessera (0.6)
 
 
