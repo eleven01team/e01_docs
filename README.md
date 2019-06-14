@@ -493,3 +493,38 @@ curl -X POST "http://localhost:8081/api/nodeinfo/add" -H"accept: application/jso
 "result": "Success"
 }
 ```
+
+7. /api/nodeinfo/update
+
+- Update saved node data in database
+- Method - PUT
+- Payload - {"filterData": "", "data": ""}
+- Responses
+     * Status code 200, {"result": <changed row number>} </changed>
+     * Status code 500, {"error": "<db error>"}
+     
+  **Example:**
+  
+  ```shell
+curl -X PUT "http://localhost:8081/api/nodeinfo/update" -H"accept: application/json" -H
+"Content-Type: application/json" -d "{ \"filterData\":\"{'type': 'admin', 'name': 'node1'}\",\"data\": \"{'status': 'Up'}\"}"
+  ```
+  
+  **Response body:**
+  
+  ```shell
+  {
+"Result": 1
+}
+  ```
+  
+ ## CREATE A DAPP
+ 
+ ### INTRODUCTION
+ 
+ This section provides details of contract language and how to create and deploy smart contracts. Eleven01 provides a platform that allows publishers to create, publish, and extend the core blockchain services beyond the core blockchain ledger. There is no need to construct and build these elements since they are a modular component of the system and can be used on an opt-in based model. Eleven01 abstracts the hardware elements and provides a simple API to create, deploy, and utilise these services, where one can connect to external data sources and web services. This allows those who are building their solution on Eleven01 to focus on application, and not complex infrastructure.
+
+Eleven01 has developed an improved way to integrate Oracles, enhancing the compatibility of our blockchain protocol.
+
+**Prerequisites to build a dApp**
+  
