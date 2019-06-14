@@ -57,10 +57,10 @@ The User has the flexibility of creating the account in two ways. They are:
 Developer has flexibility of creating the account in two ways. Those are:
 
 1. By entering the details
-  -a. After entering the details, click on “Confirm Email” button.
-  -b. Verify your registered email by clicking on the verification link.
-  -c. Enter details on application page and click on the “Sign-up” button.
-  -d. User will be redirected to the landing page to access the content present in users portal and create applications.
+      - After entering the details, click on “Confirm Email” button.
+      - Verify your registered email by clicking on the verification link.
+      - Enter details on application page and click on the “Sign-up” button.
+      - User will be redirected to the landing page to access the content present in users portal and create applications.
   
 *For **Login**, use the similar process but there won’t be any email verification
 
