@@ -34,7 +34,6 @@ In addition to the protocol, we will also be unveiling the Eleven01 “Marketpla
 ## CREATE AN ACCOUNT
 
 **Developer Account Creation:**
-
 The User has the flexibility of creating the account in two ways. They are:
 
 1. By entering the details
@@ -53,7 +52,6 @@ The User has the flexibility of creating the account in two ways. They are:
 *For **Login**,use the similar process for open authentication.
  
 **User Account Creation:**
-
 Developer has flexibility of creating the account in two ways. Those are:
 
 1. By entering the details
