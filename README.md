@@ -84,9 +84,9 @@ Eleven01 TestNet is a public network which works on Raft consensus. Installation
 1. git clone  [git@github.com](https://developers.eleven01.io/)  :eleven01team/deployment-scripts.git
 2. Change directory to deployment-scripts and run bootstrap.sh
 3. This script will install all prerequisites which includes:-
-  -->Tessera (0.6)
-  -->Go-lang(1.11.1)
-  -->Dependencies packages (libdb-dev, libleveldb-dev, libleveldb-dev, libleveldb-dev, libleveldb-dev, solc, sysvbanner, software-properties-common, default-jdk, maven)
-  -->IPFS (optional)
+  -Tessera (0.6)
+  -Go-lang(1.11.1)
+  -Dependencies packages (libdb-dev, libleveldb-dev, libleveldb-dev, libleveldb-dev, libleveldb-dev, solc, sysvbanner, software-properties-common, default-jdk, maven)
+  -IPFS (optional)
 
 
