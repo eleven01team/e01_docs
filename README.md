@@ -156,3 +156,14 @@ Creating a Node in a public or private blockchain is a common thing for a blockc
 What if you could become a participating node on a Private Network and use the previously created dApps by just following few instructions. Eleven01 provides that feature. All the keys that are related to your security and secrets are stored in a safe place that cannot be modified. From individual nodes to organisations, Eleven01 takes care of anything.
 
 **Prerequisites to join a Network:**
+    - Operating System: Ubuntu Linux 14.04 / 16.04 LTS (both 64-bit)
+    - RAM: 2 GB
+    - Geth Setup
+    - Nodejs.
+    - Git Support (already installed in recent linux versions).
+    
+## DOWNLOAD DEPENDENCIES
+
+1. Git clone [git@github.com](https://developers.eleven01.io/) :eleven01team/deployment-scripts.git
+2 .If you haven’t installed the network previously, change directory to deployment-scripts and run bootstrap.sh (or if you have installed ignore this step)
+3. Go to deployment-scripts folder and run public_join.sh, it will create a new node and its configuration to join it to a network
