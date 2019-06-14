@@ -203,7 +203,13 @@ Public blockchain Apis are classified into Node Api’s and Network Api's
     - Method - POST
     - Payload - { "networkName" : "", "nodeName": "" }
     - Response
-        -i. Status code 200, {"result": Node started }
-        -ii. Status code 400, {error: networkName not defined}|{error: nodeName not defined }
-        -iii. Status code 404, {error: not found }
+          - Status code 200, {"result": Node started }
+          - Status code 400, {error: networkName not defined}|{error: nodeName not defined }
+          - Status code 404, {error: not found }
+          
+  ``` shell
+curl -X POST "http://localhost:8083/api/network/node/start" -H "accept: application/json" 
+-H "Content-Type: application/json"
+-d "{\"networkName\": \"demo\", \"nodeName\": \"node1\"}"
+  ```
 
