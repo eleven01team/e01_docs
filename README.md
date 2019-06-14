@@ -71,9 +71,22 @@ Developer has flexibility of creating the account in two ways. Those are:
   
 *For **Login**, use the similar process for open authentication.
 
-# ARCHITECTURE AND COMPONENT OVERVIEW
+## ARCHITECTURE AND COMPONENT OVERVIEW
 
 This section contains the Architecture flowcharts with high level of details assigned to each component and states the relation between different components.
 
 ![alt text](https://developers.eleven01.io/assets/images/overview-structure.png)
+
+## ELEVEN01 PUBLIC TEST NETWORK
+
+Eleven01 TestNet is a public network which works on Raft consensus. Installation of testnet into our computer requires the following steps.
+
+1. git clone  [git@github.com](https://developers.eleven01.io/)  :eleven01team/deployment-scripts.git
+2. Change directory to deployment-scripts and run bootstrap.sh
+3. This script will install all prerequisites which includes:-
+  - ->Tessera (0.6)
+  - ->Go-lang(1.11.1)
+  - ->Dependencies packages (libdb-dev, libleveldb-dev, libleveldb-dev, libleveldb-dev, libleveldb-dev, solc, sysvbanner, software-properties-common, default-jdk, maven)
+  - ->IPFS (optional)
+
 
