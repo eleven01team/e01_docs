@@ -70,3 +70,10 @@ Developer has flexibility of creating the account in two ways. Those are:
   -c. User will be redirected to the landing page to access the content present in developers portal and create applications.
   
 *For **Login**, use the similar process for open authentication.
+
+# ARCHITECTURE AND COMPONENT OVERVIEW
+
+This section contains the Architecture flowcharts with high level of details assigned to each component and states the relation between different components.
+
+![alt text](https://developers.eleven01.io/assets/images/overview-structure.png)
+
