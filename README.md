@@ -167,3 +167,40 @@ What if you could become a participating node on a Private Network and use the p
 1. Git clone [git@github.com](https://developers.eleven01.io/) :eleven01team/deployment-scripts.git
 2 .If you haven’t installed the network previously, change directory to deployment-scripts and run bootstrap.sh (or if you have installed ignore this step)
 3. Go to deployment-scripts folder and run public_join.sh, it will create a new node and its configuration to join it to a network
+
+``` shell
+cd deployment-scripts    
+./public_join.sh
+Please enter network name you want to join[Default:TestNet]:
+Please enter number of nodes to be created[Default:1]:
+Please enter current node Ip[Default:127.0.0.1]:
+```
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+geth attach networkname/qdata/node name/node/geth.ipc
+
+``` shell
+cd deployment-scripts              
+geth attach TestNet/qdata/node2/node/geth.ipc     
+```
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+## PUBLIC BLOCKCHAIN API'S
+
+Public blockchain Apis are classified into Node Api’s and Network Api's
+
+### NODE API'S
+1. /api/network/node/start
+  -a. To start a node
+  -b. Method - POST
+  -c. Payload - { "networkName" : "", "nodeName": "" }
+  -d. Response
+
