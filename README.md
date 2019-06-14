@@ -255,4 +255,56 @@ curl -X GET "http://localhost:8083/api/node/heartbeat" -H "accept: application/j
 }
 ]
 }
- ``
+```
+
+3. /api/node/ {port }/uuid
+
+- This is a node access api
+- Method - POST
+- Parameter - port (rpc/ws)
+- Payload - { "jsonrpc": "string", "params": ["string"], "method": "string", "id": 0 }
+- Response
+     * Status code 200, <node response>
+     
+ **Example:**
+ 
+ ``` shell
+ curl -X POST "http://10.0.0.20:8083/api/node/rpc" -H "accept: application/json"
+-H "Content-Type: application/json" 
+-d " { \"jsonrpc\": \"2.0\", \"params\": [],  \"method\": \"eth_accounts\",  \"id\": 2}" -u dapp:dapp
+ ```
+ 
+ **Response body:**
+ 
+ ```shell
+ {
+"id": 2,
+"jsonrpc": "2.0",
+"result": [
+"0x501c716d5c3785bc24c3f5adee153484a7effe45"
+]
+}
+ ```
+ 
+4. /api/network/node/stop
+
+- To stop a node
+- Method - DELETE
+- Payload - None
+- Respons
+     * Status code 200, {"result": "Node stopped"}
+     
+     
+ **Example:**
+ 
+ ``` shell
+ curl -X DELETE "http://localhost:8083/api/network/node/stop" -H "accept: application/json"
+ ```
+ 
+ **Response body:**
+ 
+ ``` shell 
+ {
+"result": "Node stopped"
+}
+ ```
