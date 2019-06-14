@@ -20,6 +20,7 @@ The core features of Eleven01 include:
 4. Customisable Oracle Implementation 
 5. Identity management, Node management 
 6. Usage of Key vault 
+
 Eleven01 a competitive advantage over other blockchains. Implementing different consensus model for getting dynamic nature which includes IBFT, Raft, Clique PoA along with PoW.
 
 ## EXPLORE IN ELEVEN01
