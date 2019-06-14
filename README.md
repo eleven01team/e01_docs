@@ -93,3 +93,66 @@ Eleven01 TestNet is a public network which works on Raft consensus. Installation
 cd deployment-scripts 
 sudo ./bootstrap.sh 
 ```
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+**To Install IPFS**
+
+While running bootstrap.sh script it will ask to install **IPFS**, if you want to install **IPFS** enter **"y"**
+
+![alt text](https://developers.eleven01.io/assets/images/truffle-migrate.jpg)
+
+## ELEVEN01 CORE
+
+### DYNAMIC CONSENSUS
+
+The Eleven01 protocol provides a flexible, pluggable consensus model, when dealing with blockchain consensus protocols. This allows users to choose a particular consensus scheme that suits their need at genesis time. Currently, consensus protocols are going through rigorous academic research and one of our goals at Eleven01 is to support and improve these protocols.
+
+### IDENTITY MANAGEMENT
+
+Identity manager provides capabilities to the applications in the network to register , and authenticate a user and store user claims(passport, Aadhar) and policies. Identity manager has three levels of access.
+
+1. Application (app): - Application has access to creating user and storing policies for a user.
+2. Administrator (admin): - Admin has all the rights in a network.
+3. User (user): - user can login and modify his own data.
+
+### KEY VAULT STORAGE
+
+Key Vault, also called a secret vault, holds the credentials of users (in encrypted form), so that they are secure against crackers trying to extract secrets.
+
+Creating a Key Vault is a complex piece of engineering. It is much easier to pick up a working and proven open-source software. A security software should be open-source so that errors can be fixed as soon as they are found. With closed-source, implementers are dependent on the willingness of the vendor to provide the fix in a timely manner. It is also important to choose a software that has a large number of people working on it.
+
+### NODE MANAGEMENT
+
+Node Management comes under network category in which new nodes can be created, removed in terms of single or multiple nodes at a time. Selecting different consensus, number of nodes, permissioned or permissionless, network name, validator, admin or not, were assigned. Connection between different nodes and communication will be in Node management feature.
+
+### GOVERNANCE
+
+Governance Model is a set of policies defined to protect and secure the blockchain. Policies will impact user permissions, network access, and blockchain transactions.
+
+### CUSTOMIZABLE ORACLE IMPLEMENTATION
+An Oracle is essentially a trusted client on the blockchain. It has a unique account (a key pair) that runs off-chain, and provides data to the blockchain. It solves the requirement of external data feeds that can be integrated with the blockchain solution. The essential criteria for an Oracle is the trust that needs to be granted to its service.
+
+Eleven01 has developed an improved way to integrate Oracles, enhancing the compatibility of the protocol.
+
+### OFF-CHAIN STORAGE
+
+Off-chain storage is used to reduce the size of a blockchain to make it more efficient. This is done by using only hashes of data objects in blockchain. The data objects themselves are stored in databases that are indexed by this hash. The database need not be stored at all nodes. A central or a distributed store can be used to store data objects. InterPlanetary File System (IPFS) is a Distributed Solution addresses the problem of storing hash indexed data objects.
+
+## CREATE NODE AND JOINING A NETWORK
+
+### BEFORE YOU BEGIN
+
+Creating a Node in a public or private blockchain is a common thing for a blockchain developer but in order to create a node we have to connect with the blockchain by using the same chainID and it also depends on the configuration files of the blockchain. Manually adding nodes using the IP address is a tiresome process and may be difficult for a beginner.
+
+What if you could become a participating node on a Private Network and use the previously created dApps by just following few instructions. Eleven01 provides that feature. All the keys that are related to your security and secrets are stored in a safe place that cannot be modified. From individual nodes to organisations, Eleven01 takes care of anything.
+
+**Prerequisites to join a Network:**
