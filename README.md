@@ -43,16 +43,16 @@ The User has the flexibility of creating the account in two ways. They are:
   -c. Enter details on application page and click on the “Sign-up” button.
   -d. Developer will be redirected to the landing page to access the content present in developers portal and create applications.
   
- * For **Login**,use the similar process but there won’t be any email verification.
+ *For **Login**,use the similar process but there won’t be any email verification.
  
 2. By Social Authentications
   -a. We provide Github and Google as two open authentication options.
   -b. Based on preference choose any one. Click “Allow” on consent screen shown by chosen applications.
   -c. Developer will be redirected to the landing page to access the content present in developers portal and create applications.
   
-* For **Login**,use the similar process for open authentication.
+*For **Login**,use the similar process for open authentication.
  
-** User Account Creation:**
+**User Account Creation:**
 
 Developer has flexibility of creating the account in two ways. Those are:
 
@@ -62,11 +62,11 @@ Developer has flexibility of creating the account in two ways. Those are:
   -c. Enter details on application page and click on the “Sign-up” button.
   -d. User will be redirected to the landing page to access the content present in users portal and create applications.
   
-* For **Login**, use the similar process but there won’t be any email verification
+*For **Login**, use the similar process but there won’t be any email verification
 
 2. By social authentications
   -a. We provide Github and Google as two open authentication options
   -b. Based on preference choose any one. Click “Allow” on consent screen shown by chosen applications
   -c. User will be redirected to the landing page to access the content present in developers portal and create applications.
   
-* For **Login**, use the similar process for open authentication.
+*For **Login**, use the similar process for open authentication.
