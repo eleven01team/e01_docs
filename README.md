@@ -505,10 +505,10 @@ curl -X POST "http://localhost:8081/api/nodeinfo/add" -H"accept: application/jso
      
   **Example:**
   
-  ```shell
+```shell
 curl -X PUT "http://localhost:8081/api/nodeinfo/update" -H"accept: application/json" -H
 "Content-Type: application/json" -d "{ \"filterData\":\"{'type': 'admin', 'name': 'node1'}\",\"data\": \"{'status': 'Up'}\"}"
-  ```
+ ```
   
   **Response body:**
   
