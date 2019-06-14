@@ -199,8 +199,11 @@ Public blockchain Apis are classified into Node Api’s and Network Api's
 
 ### NODE API'S
 1. /api/network/node/start
- -a. To start a node
- -b. Method - POST
- -c. Payload - { "networkName" : "", "nodeName": "" }
- -d. Response
+    - To start a node
+    - Method - POST
+    - Payload - { "networkName" : "", "nodeName": "" }
+    - Response
+        -i. Status code 200, {"result": Node started }
+        -ii. Status code 400, {error: networkName not defined}|{error: nodeName not defined }
+        -iii. Status code 404, {error: not found }
 
